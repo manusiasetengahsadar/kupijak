@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kupijak · jual beli kopi</title>
+  <!-- Font & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER / NAV -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo"><i class="fas fa-mug-hot"></i> KopiNus</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#produk">Menu</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+        </ul>
+      </nav>
+      <div class="cart-icon" id="cartIcon">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Rasakan <span class="highlight">Keharuman</span> <br>Kopi Nusantara</h1>
+        <p>Dari biji pilihan, dipanggang dengan sempurna. Temukan kopi favoritmu dan nikmati setiap tegukan.</p>
+        <a href="#produk" class="btn-primary"><i class="fas fa-coffee"></i> Pesan Sekarang</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kopi hitam dengan biji kopi">
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUK / MENU -->
+  <section id="produk" class="produk">
+    <div class="container">
+      <div class="section-title">
+        <h2>Menu <span class="highlight">Kopi</span></h2>
+        <p>Pilih kopi favoritmu, setiap varian memiliki karakter unik.</p>
+      </div>
+      <div class="produk-grid" id="produkGrid">
+        <!-- card akan di render oleh JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- TENTANG (sekilas) -->
+  <section id="tentang" class="tentang">
+    <div class="container tentang-grid">
+      <div class="tentang-image">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Menyeduh kopi">
+      </div>
+      <div class="tentang-text">
+        <h2>Dari <span class="highlight">Kebun</span> ke Cangkirmu</h2>
+        <p>KopiNus hadir untuk menghadirkan pengalaman kopi autentik. Kami bekerja langsung dengan petani lokal untuk mendapatkan biji terbaik, lalu memprosesnya dengan metode artisanal.</p>
+        <p><i class="fas fa-check-circle" style="color: #b57c4a;"></i> 100% biji Arabika & Robusta pilihan</p>
+        <p><i class="fas fa-check-circle" style="color: #b57c4a;"></i> Panggang medium & dark sesuai varian</p>
+        <p><i class="fas fa-check-circle" style="color: #b57c4a;"></i> Kirim ke seluruh Indonesia</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 KopiNus — <i class="fas fa-heart" style="color: #b57c4a;"></i> untuk pecinta kopi</p>
+      <div class="social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART SIDEBAR (modern) -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h2><i class="fas fa-shopping-bag"></i> Keranjang</h2>
+      <button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- items dari JS -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotalPrice">Rp 0</span>
+      </div>
+      <button class="btn-primary btn-block" id="checkoutBtn">Checkout <i class="fas fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
